@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://kit.fontawesome.com/98adf16936.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10 flex">
+      <div class="jumbotron jumbo-tron-fluid text-center">
+        <h1 class="display-4"><i class="fas fa-fire"></i>Hot Restaurant</h1>
+        <P></P>
+        <p class="h3">Make your reservation</p>
+        <P></P>
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="view"><i class="far fa-list-alt"></i> View
+          Tables</a>
+        <!-- <a class="btn btn-primary btn-lg" href="#" role="button" id="add"><i class="fas fa-credit-card"></i> Make
+          Reservation</a> -->
+        <a class="" href="#" role="button" id="home">
+          <i class="fas fa-home"></i>
+        </a>
+      </div>
+    </div>
+    <div class="col-lg-1"></div>
+  </div>
+
+  <div class="container">
+    <div class="col-lg-1"></div>
+    <div class="col-lg-10 flex">
+      <P class="font-weight-bold bg-dark text-white">
+        Table Reservation
+      </P>
+      <HR>
+      <form>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="name">
+          <!-- <small id="nameHelp" class="form-text text-muted">We cann't call you "hey you"... </small> -->
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="text" class="form-control" id="phone" aria-describedby="phone" placeholder="888-555-1212">
+          <!-- <small id="phoneHelp" class="form-text text-muted">We need this to call you, right?</small> -->
+        </div>
+        <div class="form-group">
+          <label for="exampleInputEmail1">Email address</label>
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"
+            placeholder="Enter email">
+          <!-- <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small> -->
+        </div>
+        <div class="form-group">
+          <label for="id">UniqueID </label>
+          <input type="text" class="form-control" id="id" aria-describedby="id" placeholder="uniqueid">
+          <!-- <small id="IDHelp" class="form-text text-muted">We need a uniqueID to sort things</small> -->
+        </div>
+        <button type="submit" class="btn btn-primary" ID="make">Submit</button>
+      </form>
+
+
+
+    </div>
+    <div class="col-lg-1"></div>
+  </div>
+
+  <P>CTRL PANEL: <a href="/api/table">API Table Link</a> | <a href="/api/wait">API Wait List</a></P>
+
+
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+    integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+    integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+    crossorigin="anonymous"></script>
+  <script>
+    document.getElementById("home").addEventListener("click", function () {
+      console.log("Home button clicked")
+      document.location.href = 'localhost:8080/';
+    });
+    document.getElementById("view").addEventListener("click", function () {
+      console.log("View button clicked")
+      document.location.href = 'localhost:8080/view';
+    });
+  </script>
+</body>
+
+</html>
