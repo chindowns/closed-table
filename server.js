@@ -28,6 +28,11 @@ app.get("/add", function(req, res) {
     res.sendFile(path.join(__dirname, "add.html"));
 });
 
+app.get("/clear", function(req, res) {
+    tables = [];
+    waitlist = [];
+})
+
 // displays table list and wait list
 
 app.get("/api/tables", function(req, res) {
@@ -44,9 +49,14 @@ app.post("/api/add", function(req, res){
     newTable.routeName = newTable.name.replace(/\s+/g, "").toLowerCase();
 
     console.log(newTable);
-
-    tables.push(newTable);
-    res.json(newTable);
+    if(table.length<6){
+        tables.push(newTable);
+        res.json("Your Table is available");
+    } else {
+        waitlist.push(newTable);
+        res.json("You are on the waitlist");
+    }
+    
 });
 
 app.listen(PORT, function() {
