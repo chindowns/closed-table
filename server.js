@@ -51,10 +51,12 @@ app.post("/api/add", function(req, res){
     console.log(newTable);
     if(table.length<6){
         tables.push(newTable);
+        res.json("Your Table is available");
     } else {
         waitlist.push(newTable);
+        res.json("You are on the waitlist");
     }
-    res.json(newTable);
+    
 });
 
 app.listen(PORT, function() {
