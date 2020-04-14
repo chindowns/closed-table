@@ -17,7 +17,7 @@ var waitlist = [];
 // Route Listeners
 
 app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "index.html"));
+    res.sendFile(path.join(__dirname, "home.html"));
 });
 
 app.get("/view", function(req, res) {
@@ -25,7 +25,7 @@ app.get("/view", function(req, res) {
 });
 
 app.get("/add", function(req, res) {
-    res.sendFile(path.join(__dirname, "add.html"));
+    res.sendFile(path.join(__dirname, "make.html"));
 });
 
 app.get("/clear", function(req, res) {
@@ -39,7 +39,7 @@ app.get("/api/tables", function(req, res) {
     return res.json(tables);
 });
 
-app.get("/api/waitlist", function(req, res) {
+app.get("/api/wait", function(req, res) {
     return res.json(waitlist);
 });
 
